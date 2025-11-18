@@ -1,0 +1,33 @@
+:root {
+    --cor-primaria: #DFA557;
+    --cor-secundaria: #612212;
+    --cor-terciaria: #ffe1a1;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+
+
+
+.hero-section {
+    min-height: 100vh;
+    background: var(--cor-secundaria);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--cor-terciaria);
+    justify-content: space-between;
+}
