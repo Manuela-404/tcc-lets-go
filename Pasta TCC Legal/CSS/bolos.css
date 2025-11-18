@@ -2,8 +2,11 @@
     --cor-primaria: #DFA557;
     --cor-secundaria: #612212;
     --cor-terciaria: #ffe1a1;
+    --cor-quartenaria: #8b1e3f;
     --cor-fundo: #f5f5f5;
     --cor-texto: #333333;
+    --fonte-titulo: 'Dancing Script', sans-serif;
+
 }
 
 *,
@@ -14,20 +17,84 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
+    font-family: var(--fonte-texto);
+}
+
+/* inicio */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* estilo navbar */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--cor-secundaria);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 
+.navbar .nav-logo .logo-text {
+    color: var(--cor-terciaria);
+    font-size: 2rem;
+    font-weight: 600px;
+}
 
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--cor-terciaria);
+    font-size: 1.12rem;
+    border-radius: 30px;
+
+}
+
+
+/* hero section */
 
 .hero-section {
     min-height: 100vh;
-    background: var(--cor-secundaria);
+    background: #ffe3bb;
 }
 
 .hero-section .section-content {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    color: var(--cor-terciaria);
+    color: var(--cor-quartenaria);
     justify-content: space-between;
 }
+
+.hero-section .hero-details .title {
+    font-size: 2.3rem;
+    color: yellow;
+    font-family: 'Dancing Script', cursive;
+}
+
+    .hero-section .hero-details .subtitle {
+        
+    } 
+
+
