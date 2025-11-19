@@ -1,5 +1,5 @@
 :root {
-    --cor-primaria: #DFA557;
+    --cor-primaria: #dfa557;
     --cor-secundaria: #612212;
     --cor-terciaria: #ffe1a1;
     --cor-quartenaria: #8b1e3f;
@@ -40,7 +40,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 5;
-    background: var(--cor-secundaria);
+    background: linear-gradient(to right, #f7f5da, #e2a02d);
 }
 
 header .navbar {
@@ -53,7 +53,7 @@ header .navbar {
 
 
 .navbar .nav-logo .logo-text {
-    color: var(--cor-terciaria);
+    color: var(--cor-quartenaria);
     font-size: 2rem;
     font-weight: 600px;
 }
@@ -65,7 +65,7 @@ header .navbar {
 
 .navbar .nav-menu .nav-link {
     padding: 10px 18px;
-    color: var(--cor-terciaria);
+    color: var(--cor-quartenaria);
     font-size: 1.12rem;
     border-radius: 30px;
 
@@ -76,10 +76,11 @@ header .navbar {
 
 .hero-section {
     min-height: 100vh;
-    background: #ffe3bb;
+    background: linear-gradient(to right, #f7f5da, #e2a02d);
 }
 
 .hero-section .section-content {
+    padding: 0 60px;
     display: flex;
     align-items: center;
     min-height: 100vh;
@@ -89,12 +90,152 @@ header .navbar {
 
 .hero-section .hero-details .title {
     font-size: 2.3rem;
-    color: yellow;
+    color: var(--cor-quartenaria);
     font-family: 'Dancing Script', cursive;
 }
 
-    .hero-section .hero-details .subtitle {
-        
-    } 
+.hero-section .hero-details .subtitle {
+    margin-top: 8px;
+    max-width: 70%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--cor-quartenaria);
+    /* font-family: 'Dancing Script', cursive; */
+}
 
+.hero-section .hero-details .description {
+    max-width: 70%;
+    margin: 24px 0 40px;
+    font-size: 1.12rem;
+}
 
+.hero-section .hero-image-wrapper {
+    max-width: 600px;
+    margin-right: 30px;
+
+}
+
+.hero-image-wrapper {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* catálogo */
+
+.catalogo-section {
+    background: #fff;
+    padding: 80px 60px;
+    color: var(--cor-quartenaria);
+}
+
+.catalogo-titulo {
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.catalogo-sub {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+}
+
+/* scroll horizontal */
+
+.scroll-x {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+/* cards dos bolos */
+
+.card-bolo {
+    background: #fdf7e6;
+    padding: 20px;
+    min-width: 260px;
+    border-radius: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: .3s ease;
+}
+
+.card-bolo img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+
+.card-bolo h3 {
+    font-size: 1.5rem;
+    color: var(--cor-quartenaria);
+    margin-bottom: 6px;
+}
+
+.card-bolo p {
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+}
+
+.card-bolo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* --- estilo do scrollbar — para o container .scroll-x --- */
+
+.scroll-x::-webkit-scrollbar {
+    height: 12px;
+}
+
+.scroll-x::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 8px;
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+    background: var(--cor-quartenaria);
+    border-radius: 8px;
+    min-width: 56px;
+    transition: transform .15s ease, background .15s ease, opacity .15s ease;
+    opacity: 0.9;
+    border: 3px solid rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+.scroll-x::-webkit-scrollbar-thumb:hover {
+    transform: scaleY(1.05);
+    background: var(--cor-secundaria);
+    opacity: 1;
+}
+
+.scroll-x {
+    scrollbar-gutter: stable;
+}
+
+.scroll-x:not(:hover)::-webkit-scrollbar-thumb {
+    opacity: 0.55;
+}
+
+.scroll-x {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-quartenaria) transparent;
+}
+
+.scroll-x:hover {
+    cursor: grab;
+}
